@@ -1,0 +1,76 @@
+print("-----LIST-----")
+#list menggunakan []
+warna=["merah","kuning","hijau"]
+print(warna)
+print(type(warna))
+rak=["sepatu",50,3,14,True]
+print(rak)
+kendaraan=["motor","mobil","becak"]
+print("Kendaraan : ",kendaraan[0])
+print("Kendaraan : ",kendaraan[2])
+for i in kendaraan:
+    print("Kendaraan dengan Loop : ",i)
+
+#mengganti item list
+makanan=["geprek","katsu","tahu","mie ayam"]
+print("List sebelum diubah : ",(makanan))
+makanan[2]="pizza"
+print("List setelah diubah : ",(makanan))
+
+#menambah item list
+buah=["apel","jeruk","mangga"]
+print(buah)
+#append (menambah item dari belakag)
+buah.append("salak")
+print(buah)
+
+#insert (menambah item dari indeks tertentu)
+buah.insert(0,"anggur")
+print(buah)
+
+#menghapus item di list
+#remove
+buah.remove("apel")
+print(buah)
+#del
+del buah[0]
+print(buah)
+
+#menghitung panjang list
+print("Panjang List : ",len(buah))
+
+#penulisan indeks lsit menggunakan looping
+# dengan fungsi enumerate
+
+for x,data in enumerate(buah):
+    print("Data ke {} isinya {} ".format(x,data))
+#x -> indeks
+#data -> isi
+
+print("-----TUPLE-----")
+#tuple ()
+#tuple tidak dapat diubah,ditambah,maupun dihapus
+data_tuple=("mawar","melati",5,4,3)
+print(data_tuple)
+print(type(data_tuple))
+
+print("-----DICTIONARY-----")
+#Dictionary {}
+#ada key , val (kata kunci,isi)
+data_dict={"Fakultas":"Ilmu Komputer","Progdi":"Teknik Informatika","Tahun : ":2019}
+print(data_dict)
+print(type(data_dict))
+print(data_dict["Fakultas"])
+
+#mencari key dalam kamus
+for key in data_dict:
+    print(key)
+
+#mencari val dalam kamus
+#for nama in nama_dictionary.values()
+for val in data_dict.values():
+    print(val)
+
+for key in data_dict:
+    print(key,"----->",data_dict[key])
+
